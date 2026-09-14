@@ -1,0 +1,12 @@
+{
+  "name": "Roto-Rooter Design Study",
+  "short_name": "Roto-Rooter",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B2A4A",
+  "theme_color": "#C8102E",
+  "description": "Independent design study of Roto-Rooter plumbing — not affiliated.",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
