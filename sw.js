@@ -1,4 +1,4 @@
-const CACHE = 'rr-pwa-v2';
+const CACHE = 'rr-pwa-v3';
 const ASSETS = [
   '/',
   '/index.html',

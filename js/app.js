@@ -199,6 +199,8 @@
     pay.addEventListener('submit', function (e) {
       e.preventDefault();
       pay.hidden = true;
+      pay.setAttribute('hidden', '');
+      pay.style.display = 'none';
       done.hidden = false;
     });
   }

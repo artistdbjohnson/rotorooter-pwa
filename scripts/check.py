@@ -68,6 +68,8 @@ def main() -> int:
         fail("js missing reduced-motion gate")
     if "IntersectionObserver" not in js:
         fail("js missing visibility/offscreen gate")
+    if "[hidden]" not in css:
+        fail("css missing [hidden] override for display:grid forms")
     if "serviceWorker" not in js:
         fail("js missing service worker registration")
 
