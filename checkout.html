@@ -1,1 +1,86 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Submit Payment | Roto-Rooter Design Study</title><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/css/app.css"/></head><body><div class="study-banner">Independent design study. Mock checkout only. Not affiliated with Roto-Rooter®.</div><header class="nav"><a class="logo" href="/">ROTO-ROOTER</a><div class="nav-actions"><a class="btn primary" href="/schedule.html">Schedule Now</a></div><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></header><div class="overlay" id="overlay"><a href="/">Home</a></div><section class="wrap"><h1>Submit Payment</h1><p>Free onsite estimates. No hidden or extra charges for plumbing or drain service on holidays, nights, and weekends.</p><form class="form" id="pay"><input name="card" placeholder="Card number" required autocomplete="off"/><input name="exp" placeholder="MM/YY" required/><input name="cvc" placeholder="CVC" required/><input name="zip" placeholder="Billing ZIP" required/><button class="btn primary" type="submit">Submit Payment</button></form><div class="ok" id="done" hidden><strong>Payment submitted (demo).</strong><p>No charge was processed.</p><p><a class="btn primary" href="/">Return home</a></p></div></section><footer class="foot"><p>Independent design study. Not affiliated with Roto-Rooter®.</p></footer><script src="/js/app.js"></script><script>document.getElementById('pay').addEventListener('submit',function(e){e.preventDefault();e.target.hidden=true;document.getElementById('done').hidden=false;});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit Payment | Roto-Rooter Design Study</title>
+  <meta name="description" content="Free onsite estimates. No hidden or extra charges for plumbing or drain service on holidays, nights, and weekends." />
+  <meta property="og:title" content="Submit Payment | Roto-Rooter Design Study" />
+  <meta property="og:description" content="Free onsite estimates. No hidden or extra charges for plumbing or drain service on holidays, nights, and weekends." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rotorooter-pwa.vercel.app/checkout" />
+  <meta property="og:image" content="https://rotorooter-pwa.vercel.app/images/og.png" />
+  <meta name="theme-color" content="#C8102E" />
+  <link rel="canonical" href="https://rotorooter-pwa.vercel.app/checkout" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rr-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        else document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav liquid-glass">
+    <a class="brand" href="/"><span class="brand-rule" aria-hidden="true"></span>ROTO-ROOTER</a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/schedule">Schedule Now</a>
+        <a href="tel:8007686911">800-768-6911</a>
+        <div class="nav-tools">
+          <div class="seg" role="group" aria-label="Theme">
+            <button type="button" data-set-theme="light">Light</button>
+            <button type="button" data-set-theme="dark">Dark</button>
+          </div>
+        </div>
+      </nav>
+      <a class="cta cta-compact" href="tel:8007686911">800-768-6911</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    </div>
+  </header>
+  <section class="page-hero">
+    <div class="page-hero-bg restored" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="eyebrow">Transparency</p>
+      <h1>Submit Payment</h1>
+    </div>
+  </section>
+  <main class="page" id="main">
+    <section class="section">
+      <p>Free onsite estimates. No hidden or extra charges for plumbing or drain service on holidays, nights, and weekends.</p>
+      <p class="notice" style="margin-top:18px">Mock checkout — no real payment is processed. This is an independent design study.</p>
+      <form class="panel liquid-glass" id="pay" style="margin-top:28px">
+        <label>Name on card <input name="cardname" required autocomplete="off" /></label>
+        <label>Card number <input name="card" required autocomplete="off" inputmode="numeric" /></label>
+        <label>Expiry <input name="exp" placeholder="MM/YY" required autocomplete="off" /></label>
+        <label>CVC <input name="cvc" required autocomplete="off" /></label>
+        <label>Billing ZIP <input name="zip" required autocomplete="off" /></label>
+        <button class="submit" type="submit">Submit Payment</button>
+      </form>
+      <div class="ok" id="done" hidden>
+        <strong>Payment submitted (demo).</strong>
+        <p>Your mock dispatch request was received. A local franchise would call you next. No payment was charged.</p>
+        <p style="margin-top:14px"><a class="cta" href="/">Return home</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div>800-768-6911 · 24/7 Emergency service is our specialty</div>
+    <p class="disclaimer">Independent design study. Mock checkout only. Not affiliated with Roto-Rooter®.</p>
+  </footer>
+  <div class="dock liquid-glass">
+    <a class="cta" href="tel:8007686911">800-768-6911</a>
+    <a class="btn-ghost" href="/schedule">Schedule Now</a>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

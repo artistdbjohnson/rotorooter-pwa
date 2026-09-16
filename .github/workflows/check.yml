@@ -1,0 +1,12 @@
+name: check
+on:
+  pull_request:
+  push:
+    branches: ["cursor/**"]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate PWA craft gates
+        run: python3 scripts/check.py
