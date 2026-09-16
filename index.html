@@ -1,87 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roto-Rooter® | Plumbing, Drains &amp; Water Cleanup</title>
+  <meta name="description" content="Roto-Rooter Plumbing and Water Cleanup® service is the #1 plumbing and drain cleaning company. Open &amp; Available 24/7. Call 1-800-768-6911!" />
+  <meta property="og:title" content="Roto-Rooter Plumbing &amp; Drain Service | Roto-Rooter®" />
+  <meta property="og:description" content="Roto-Rooter Plumbing and Water Cleanup® service is the #1 plumbing and drain cleaning company. Open &amp; Available 24/7. Call 1-800-768-6911!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rotorooter-pwa.vercel.app/" />
+  <meta property="og:image" content="https://rotorooter-pwa.vercel.app/images/og.png" />
+  <meta property="og:site_name" content="Roto-Rooter Plumbing &amp; Water Cleanup" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Roto-Rooter® | Plumbing, Drains &amp; Water Cleanup" />
+  <meta name="twitter:description" content="Roto-Rooter Plumbing and Water Cleanup® service is the #1 plumbing and drain cleaning company. Open &amp; Available 24/7. Call 1-800-768-6911!" />
   <meta name="theme-color" content="#C8102E" />
-  <meta name="description" content="The Plumbing Experts You've Trusted for Over 90 Years. Independent design study — not affiliated with Roto-Rooter." />
-  <title>Roto-Rooter® | Plumbing, Drains & Water Cleanup</title>
+  <link rel="canonical" href="https://rotorooter-pwa.vercel.app/" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/icons/icon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
   <link rel="stylesheet" href="/css/app.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rr-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        else document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <div class="study-banner">Independent design study. Not affiliated with Roto-Rooter® or its franchisees.</div>
-  <header class="nav">
-    <a class="logo" href="/">ROTO-ROOTER</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/services.html">Services</a>
-      <a href="/reviews.html">Reviews</a>
-      <a href="/contact.html">Contact us</a>
-    </nav>
-    <div class="nav-actions">
-      <a class="btn ghost" href="tel:8007686911">800-768-6911</a>
-      <a class="btn primary" href="/schedule.html">Schedule Now</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav liquid-glass">
+    <a class="brand" href="/"><span class="brand-rule" aria-hidden="true"></span>ROTO-ROOTER</a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/services">Services</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/contact">Contact us</a>
+        <a href="tel:8007686911">800-768-6911</a>
+        <a class="cta cta-nav" href="/schedule">Schedule Now</a>
+        <div class="nav-tools">
+          <div class="seg" role="group" aria-label="Theme">
+            <button type="button" data-set-theme="light" aria-pressed="true">Light</button>
+            <button type="button" data-set-theme="dark" aria-pressed="false">Dark</button>
+          </div>
+        </div>
+      </nav>
+      <a class="cta cta-compact" href="tel:8007686911">800-768-6911</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
     </div>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
   </header>
-  <div class="overlay" id="overlay">
-    <a href="/">Home</a>
-    <a href="/services.html">Services</a>
-    <a href="/reviews.html">Reviews</a>
-    <a href="/contact.html">Contact us</a>
-    <a href="/schedule.html">Schedule Now</a>
-    <a href="tel:8007686911">Call 800-768-6911</a>
-  </div>
   <section class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-veil"></div>
+    <div id="heroBg" class="hero-media" aria-hidden="true">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" type="video/mp4" />
+      </video>
+      <img class="hero-cutout" src="/images/hero.webp" srcset="/images/hero-mobile.webp 800w, /images/hero.webp 1600w" sizes="(max-width: 820px) 80vw, 58vw" alt="" />
+    </div>
+    <div class="hero-grade" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <div class="pill"><span class="pill-new">24/7</span> Emergency service is our specialty</div>
+      <p class="eyebrow">24/7 Emergency service is our specialty</p>
       <h1>The Plumbing Experts You've Trusted for Over 90 Years</h1>
-      <p>Fast, Friendly and Professional Service. Trusted and recommended since 1935, Roto-Rooter is the largest provider of plumbing and drain cleaning services in North America.</p>
-      <div class="cta-row">
-        <a class="btn primary lg" href="tel:8007686911">Call Us Now! 800-768-6911</a>
-        <a class="btn dark lg" href="/schedule.html">Schedule Now!</a>
+      <p class="lede">Fast, Friendly and Professional Service. Trusted and recommended since 1935, Roto-Rooter is the largest provider of plumbing and drain cleaning services in North America.</p>
+      <div class="hero-actions">
+        <a class="cta" href="tel:8007686911">Call Us Now! 800-768-6911</a>
+        <a class="btn-ghost" href="/schedule">Schedule Now!</a>
       </div>
-      <form class="zip" action="/schedule.html" method="get">
-        <label class="sr">Enter ZIP, City or Postal Code</label>
-        <input name="zip" placeholder="Enter ZIP, City or Postal Code" />
-        <button class="btn primary" type="submit">Find your local plumber</button>
+      <form class="zip" action="/schedule" method="get">
+        <label for="zip">Enter ZIP, City or Postal Code</label>
+        <input id="zip" name="zip" placeholder="Enter ZIP, City or Postal Code" />
+        <button class="cta" type="submit">Find your local plumber</button>
       </form>
+      <ul class="trust-row">
+        <li class="liquid-glass"><b>Available 24/7</b><span>Same-day and emergency service 365 days a year.</span></li>
+        <li class="liquid-glass"><b>Trusted since 1935</b><span>Highly-trained professionals. A job done right by the original experts.</span></li>
+        <li class="liquid-glass"><b>#1 plumbing company</b><span>The largest provider of plumbing and drain cleaning services in North America.</span></li>
+      </ul>
     </div>
   </section>
-  <section class="wrap">
-    <h2 class="section-kicker">OUR SERVICES</h2>
-    <div class="cards">
-      <article class="card"><h3>Emergency Plumber</h3><p>Our plumbers are ready to go for emergencies</p><a href="/services.html#emergency">Explore this service</a></article>
-      <article class="card"><h3>Water Damage</h3><p>Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p><a href="/services.html#water">Water Damage</a></article>
-      <article class="card"><h3>Drain Cleaning</h3><p>Powerful drain cleaning to clear clogs and restore flow</p><a href="/services.html#drain">Explore this service</a></article>
-      <article class="card"><h3>Water Heaters</h3><p>Trust Roto-Rooter for repair and replacement of gas, electric and tankless water heaters.</p><a href="/services.html#heaters">Water Heaters</a></article>
-    </div>
-  </section>
-  <section class="wrap band">
-    <h2>LEAVE PLUMBING TO THE PROS</h2>
-    <p class="lede">BECAUSE WITH ROTO-ROOTER, YOU GET MORE THAN A GUARANTEE.</p>
-    <ul class="pros">
-      <li><strong>REPUTATION</strong> Highly-trained professionals since 1935. A job done right by the original experts.</li>
-      <li><strong>TRANSPARENCY</strong> Free onsite estimates. No hidden or extra charges for plumbing or drain service on holidays, nights, and weekends.</li>
-      <li><strong>EFFICIENCY</strong> Same-day and emergency service 365 days a year.</li>
-      <li><strong>QUALITY</strong> Full-service plumbing, drain cleaning, and water cleanup – using state-of-the-art diagnostics and equipment.</li>
-      <li><strong>FINANCING</strong> Get it fixed today and take time to pay. Special financing options available.</li>
-    </ul>
-  </section>
-  <footer class="foot">
-    <p>Independent design study. Not affiliated with Roto-Rooter®.</p>
-    <p><a href="/contact.html">Contact</a> · <a href="/schedule.html">Schedule Service</a> · <a href="tel:8007686911">800-768-6911</a></p>
+  <main class="page" id="main">
+    <section class="section">
+      <p class="kicker">Leave plumbing to the pros</p>
+      <h2>LEAVE PLUMBING TO THE PROS</h2>
+      <p>BECAUSE WITH ROTO-ROOTER, YOU GET MORE THAN A GUARANTEE.</p>
+      <div class="stats">
+        <div class="stat liquid-glass"><b>90+</b><span>Years Trusted</span></div>
+        <div class="stat liquid-glass"><b>24/7</b><span>Emergency Service</span></div>
+        <div class="stat liquid-glass"><b>1935</b><span>The original experts</span></div>
+        <div class="stat liquid-glass"><b>90%</b><span>of the U.S. population served</span></div>
+      </div>
+    </section>
+    <section class="section band" style="padding-top:48px">
+      <p class="kicker">Our Services</p>
+      <h2>Plumbing, Drains &amp; Water Cleanup</h2>
+      <p>More people depend on Roto-Rooter than on any other company for plumbing and drain cleaning services.</p>
+      <div class="grid">
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4"/><path d="M8 8h8"/><path d="M7 20h10l-1-8H8l-1 8z"/></svg>
+          <h3>Emergency Plumber</h3>
+          <p>Our plumbers are ready to go for emergencies</p>
+          <a href="/services#emergency">Explore this service</a>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14c3-6 13-6 16 0"/><path d="M3 17h18"/></svg>
+          <h3>Water Damage</h3>
+          <p>Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+          <a href="/services#water">Water Damage</a>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v6H7z"/><path d="M9 10v8M15 10v8"/><path d="M8 18h8"/></svg>
+          <h3>Drain Cleaning</h3>
+          <p>Powerful drain cleaning to clear clogs and restore flow</p>
+          <a href="/services#drain">Explore this service</a>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 20V9a4 4 0 0 1 8 0v11"/><path d="M6 20h12"/></svg>
+          <h3>Water Heaters</h3>
+          <p>Trust Roto-Rooter for repair and replacement of gas, electric and tankless water heaters.</p>
+          <a href="/services#heaters">Water Heaters</a>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <h2>BECAUSE WITH ROTO-ROOTER, YOU GET MORE THAN A GUARANTEE.</h2>
+      <ul class="pros">
+        <li class="liquid-glass"><strong>REPUTATION</strong> Highly-trained professionals since 1935. A job done right by the original experts.</li>
+        <li class="liquid-glass"><strong>TRANSPARENCY</strong> Free onsite estimates. No hidden or extra charges for plumbing or drain service on holidays, nights, and weekends.</li>
+        <li class="liquid-glass"><strong>EFFICIENCY</strong> Same-day and emergency service 365 days a year.</li>
+        <li class="liquid-glass"><strong>QUALITY</strong> Full-service plumbing, drain cleaning, and water cleanup – using state-of-the-art diagnostics and equipment.</li>
+        <li class="liquid-glass"><strong>FINANCING</strong> Get it fixed today and take time to pay. Special financing options available.</li>
+      </ul>
+    </section>
+    <section class="section">
+      <div class="split">
+        <div>
+          <p class="kicker">Questions</p>
+          <h2>YOU HAVE QUESTIONS, WE HAVE ANSWERS.</h2>
+          <p>Read our most frequently asked questions for your plumbing needs, or watch our latest videos.</p>
+          <p class="prose" style="margin-top:14px">Founded in 1935, Roto-Rooter is the largest provider of plumbing, drain cleaning and water cleanup services in North America. Roto-Rooter operates businesses in more than 100 company-owned branch and independent contractor territories and approximately 400 independent franchise operations, serving approximately 90% of the U.S. population and parts of Canada.</p>
+        </div>
+        <aside class="panel liquid-glass">
+          <p class="kicker">Schedule Service</p>
+          <p>Call Us Now! 800-768-6911</p>
+          <p style="margin-top:10px">For residential or commercial services, you can depend on Roto-Rooter 24 hours a day, 7 days a week.</p>
+          <a class="cta" href="/schedule">Schedule Now</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div>800-768-6911 · 24/7 Emergency service is our specialty</div>
+    <p class="disclaimer">Independent design study, not affiliated with Roto-Rooter® or its franchisees. Exact public marketing copy and brand red used for a Motionsites datacore-booking-hero craft study only. Chrome can install this PWA from the address bar.</p>
   </footer>
+  <div class="dock liquid-glass">
+    <a class="cta" href="tel:8007686911">800-768-6911</a>
+    <a class="btn-ghost" href="/schedule">Schedule Now</a>
+  </div>
   <script src="/js/app.js"></script>
 </body>
 </html>

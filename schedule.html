@@ -1,1 +1,95 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Schedule Service | Roto-Rooter Design Study</title><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/css/app.css"/><link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet"/></head><body><div class="study-banner">Independent design study. Not affiliated with Roto-Rooter® or its franchisees.</div><header class="nav"><a class="logo" href="/">ROTO-ROOTER</a><nav class="nav-links"><a href="/">Home</a><a href="/services.html">Services</a><a href="/reviews.html">Reviews</a><a href="/contact.html">Contact us</a></nav><div class="nav-actions"><a class="btn primary" href="/schedule.html">Schedule Now</a></div><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></header><div class="overlay" id="overlay"><a href="/">Home</a><a href="/schedule.html">Schedule Now</a></div><section class="wrap"><h1>Schedule Service</h1><p>Roto-Rooter offers the convenience of online scheduling for your drain cleaning and plumbing service needs.</p><p class="notice">This is a mock booking flow for an independent design study. No real dispatch or payment is processed.</p><form class="form" action="/checkout.html" method="get"><select name="service" required><option value="">Select a service</option><option>Emergency Plumber</option><option>Drain Cleaning</option><option>Water Damage</option><option>Water Heaters</option></select><input name="zip" placeholder="Enter ZIP, City or Postal Code" required/><input name="name" placeholder="Full name" required/><input name="phone" placeholder="Phone" required/><input type="date" name="day" required/><button class="btn primary" type="submit">Continue to payment</button></form></section><footer class="foot"><p>Independent design study. Not affiliated with Roto-Rooter®.</p></footer><script src="/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roto-Rooter Plumbing &amp; Water Cleanup | Schedule Your Appointment</title>
+  <meta name="description" content="From your home or office you can set up an appointment online, and Roto-Rooter will be there to deliver a great service experience. Learn more about it here!" />
+  <meta property="og:title" content="Schedule Service | Roto-Rooter" />
+  <meta property="og:description" content="From your home or office you can set up an appointment online, and Roto-Rooter will be there to deliver a great service experience. Learn more about it here!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rotorooter-pwa.vercel.app/schedule" />
+  <meta property="og:image" content="https://rotorooter-pwa.vercel.app/images/og.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Schedule Service | Roto-Rooter" />
+  <meta name="twitter:description" content="From your home or office you can set up an appointment online, and Roto-Rooter will be there to deliver a great service experience. Learn more about it here!" />
+  <meta name="theme-color" content="#C8102E" />
+  <link rel="canonical" href="https://rotorooter-pwa.vercel.app/schedule" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('rr-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        else document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav liquid-glass">
+    <a class="brand" href="/"><span class="brand-rule" aria-hidden="true"></span>ROTO-ROOTER</a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/contact">Contact us</a>
+        <a href="tel:8007686911">800-768-6911</a>
+        <a class="cta cta-nav" href="/schedule" aria-current="page">Schedule Now</a>
+        <div class="nav-tools">
+          <div class="seg" role="group" aria-label="Theme">
+            <button type="button" data-set-theme="light">Light</button>
+            <button type="button" data-set-theme="dark">Dark</button>
+          </div>
+        </div>
+      </nav>
+      <a class="cta cta-compact" href="tel:8007686911">800-768-6911</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    </div>
+  </header>
+  <section class="page-hero">
+    <div class="page-hero-bg restored" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="eyebrow">24/7 Emergency service is our specialty</p>
+      <h1>Schedule Service</h1>
+    </div>
+  </section>
+  <main class="page" id="main">
+    <section class="section">
+      <p>Roto-Rooter offers the convenience of online scheduling for your drain cleaning and plumbing service needs.</p>
+      <p class="prose" style="margin-top:14px">From your home or office you can set up an appointment online, and Roto-Rooter will be there to deliver a great service experience.</p>
+      <p class="notice" style="margin-top:18px">This is a mock booking flow for an independent design study. No real dispatch or payment is processed.</p>
+      <form class="panel liquid-glass" action="/checkout" method="get" style="margin-top:28px">
+        <label>Select a service
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Emergency Plumber</option>
+            <option>Drain Cleaning</option>
+            <option>Water Damage</option>
+            <option>Water Heaters</option>
+          </select>
+        </label>
+        <label>Enter ZIP, City or Postal Code <input name="zip" required /></label>
+        <label>Full name <input name="name" required /></label>
+        <label>Phone <input name="phone" required /></label>
+        <label>Day <input type="date" name="day" required /></label>
+        <button class="submit" type="submit">Continue to payment</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div>800-768-6911 · 24/7 Emergency service is our specialty</div>
+    <p class="disclaimer">Independent design study. Mock request only. Not affiliated with Roto-Rooter®.</p>
+  </footer>
+  <div class="dock liquid-glass">
+    <a class="cta" href="tel:8007686911">800-768-6911</a>
+    <a class="btn-ghost" href="/schedule">Schedule Now</a>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
